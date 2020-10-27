@@ -1,15 +1,16 @@
 function Suma(props){
-    // const { num1, num2 } = props;
-    // const sumarNumeros = (num1, num2) => {
-    //     var suma = parseInt(num1) + parseInt(num2);
-    //     console.log("La suma es " + suma);
-    // };
     const { num1, num2, suma, color, bg } = props;
-    var estilo = {color: color, backgroundColor: bg};
+    const sumarNumeros = (num1, num2) => {
+        var suma = parseInt(num1) + parseInt(num2);
+        console.log("La suma es " + suma);
+        return suma;
+    };
+    var estiloPadre = {color: color, backgroundColor: bg};
+    var estiloHijo = {color: "red", backgroundColor: "grey"};
     return (
         <div>
-            {/* <h1 style={estilo}>Sumar números: {sumarNumeros(num1,num2)}</h1> */}
-            <h1 style={estilo}>Sumar números: {suma(num1, num2)}</h1>
+            <h1 style={estiloHijo}>Sumar números: {sumarNumeros(num1,num2)}</h1>
+            <h1 style={estiloPadre}>Sumar números: {suma(num1, num2)}</h1>
         </div>
     )
 }

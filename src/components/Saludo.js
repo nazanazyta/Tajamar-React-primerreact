@@ -13,7 +13,7 @@ function Saludo(props){
         console.log("La suma es " + suma);
     };
     const mostrarMensaje = () => {
-        return <h1>Soy un mensaje HTML</h1>;
+        return <h1><u>Soy un mensaje HTML</u></h1>;
     }
     //SI DECLARAMOS LAS VARIABLES UNA A UNA,
     //A LA HORA DE LLAMARLAS EN EL div SÍ ACEPTA
@@ -23,19 +23,19 @@ function Saludo(props){
     //LOS NOMBRES DE LAS PROPIEDADES LAS ESTRUCTURA
     //NO POR POSICIÓN, SINO POR EL NOMBRE DE LOS
     //ELEMENTOS ENVIADOS DESDE EL PARENT
-    const { nombre, edad, metodo } = props;
-    var estilofeo = {color: "white", backgroundColor: "green"};
+    const { nombre, edad, metodo, estilo } = props;
+    //var estilofeo = {color: "white", backgroundColor: "green"};
     return (
     //SOLO PODEMOS DEVOLVER UNA ETIQUETA, AUNQUE
     //ESTA CONTENGA OTRAS ETIQUETAS DENTRO
     <div>
-        <h1 style={estilofeo}>{ejemplo}</h1>
+        <h1 style={estilo}>{ejemplo}</h1>
         {/* EJECUTANDO DIRECTAMENTE LA FUNCIÓN */}
-        {sumarNumeros(7,7)}
-        {botonPulsado()}
+        {/* {sumarNumeros(7,7)}
+        {botonPulsado()} */}
         {mostrarMensaje()}
         {/* <h1>Saludando a {name}, con edad {age}</h1> */}
-        <h1>Saludando a {nombre}, con edad {edad}</h1>
+        <h1>Saludando a <big><i> {nombre} </i></big>, con edad <big><u> {edad} </u></big></h1>
         <button onClick={() => metodo(nombre + " " + edad)}>Método Padre</button>
         <button onClick={() => botonPulsado()}>Pulsar botón</button>
         <button onClick={() => sumarNumeros(4,5)}>Mostrar suma</button>
