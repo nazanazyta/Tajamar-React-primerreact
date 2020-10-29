@@ -1,3 +1,5 @@
+//Práctica
+
 // NAZA
 // function Suma(props){
 //     const { num1, num2, suma, color, bg } = props;
