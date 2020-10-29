@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App/App';
+// import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
+// import Contador from './components/Contador';
+import Car from './components/Car';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    {/* <Contador /> */}
+    <Car marca="Opel" modelo="Astra" aceleracion="30" velmax="140"/>
+    <Car marca="Seat" modelo="Ibiza" aceleracion="10" velmax="100"/>
   </React.StrictMode>,
   document.getElementById('root')
 );
